@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaClean - Layanan Cuci Sepatu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f7f9fc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #ffd166;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #102a43, #176b87);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffd166;
+            color: #102a43;
+            padding: 12px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #f5bd43;
+        }
+
+        section {
+            padding: 65px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            color: #102a43;
+        }
+
+        .section-title p {
+            color: #657786;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.07);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #176b87;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            color: #102a43;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .popular {
+            border: 2px solid #ffd166;
+        }
+
+        .features {
+            background: #eaf2f8;
+        }
+
+        .status {
+            color: #176b87;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .booking {
+            background: #102a43;
+            color: white;
+            text-align: center;
+        }
+
+        .booking h2 {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #091b2b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <header>
+        <div class="logo">AjaClean.</div>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#profil">Profil</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#harga">Harga</a>
+            <a href="#keunggulan">Keunggulan</a>
+            <a href="#testimoni">Testimoni</a>
+        </nav>
+    </header>
+
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+        <h1>Sepatu Bersih, Tampil Percaya Diri!</h1>
+
+        <p>
+            AjaClean hadir sebagai solusi pencucian sepatu
+            yang praktis, mudah, dan terpercaya.
+            Pesan layanan secara online tanpa perlu repot.
+        </p>
+
+        <a href="booking.html" class="btn">Pesan Sekarang</a>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil">
+        <div class="section-title">
+            <h2>Profil AjaClean</h2>
+            <p>Mengenal layanan kami lebih dekat</p>
+        </div>
+
+        <div class="about">
+            <p>
+                AjaClean merupakan layanan pencucian sepatu
+                berbasis digital yang memudahkan pelanggan
+                melakukan pemesanan, mengetahui harga layanan,
+                dan memantau proses pencucian sepatu.
+                Kami berkomitmen memberikan pelayanan yang
+                praktis dan berkualitas.
+            </p>
+        </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section id="layanan">
+        <div class="section-title">
+            <h2>Layanan Kami</h2>
+            <p>Pilih perawatan sepatu sesuai kebutuhanmu</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Fast Clean</h3>
+                <p>Pembersihan sepatu untuk perawatan sehari-hari.</p>
+                <p class="price">Rp25.000</p>
+                <a href="booking.html" class="btn">Pilih Layanan</a>
+            </div>
+
+            <div class="card popular">
+                <h3>Deep Clean</h3>
+                <p>Pembersihan sepatu secara lebih menyeluruh.</p>
+                <p class="price">Rp40.000</p>
+                <a href="booking.html" class="btn">Pilih Layanan</a>
+            </div>
+
+            <div class="card">
+                <h3>Unyellowing</h3>
+                <p>Perawatan untuk membantu mengurangi tampilan menguning pada bagian sepatu tertentu.</p>
+                <p class="price">Rp50.000</p>
+                <a href="booking.html" class="btn">Pilih Layanan</a>
+            </div>
+        </div>
+
+        <p id="serviceStatus" class="status" style="text-align:center;">
+            Memeriksa layanan dari server...
+        </p>
+    </section>
+
+    <!-- HARGA -->
+    <section id="harga">
+        <div class="section-title">
+            <h2>Daftar Harga</h2>
+            <p>Harga layanan pencucian sepatu AjaClean</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Fast Clean</h3>
+                <p class="price">Rp25.000</p>
+            </div>
+
+            <div class="card">
+                <h3>Deep Clean</h3>
+                <p class="price">Rp40.000</p>
+            </div>
+
+            <div class="card">
+                <h3>Unyellowing</h3>
+                <p class="price">Rp50.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="features" id="keunggulan">
+        <div class="section-title">
+            <h2>Keunggulan AjaClean</h2>
+            <p>Kemudahan dalam setiap pemesanan</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Pesan Online</h3>
+                <p>Pemesanan layanan dapat dilakukan melalui website.</p>
+            </div>
+
+            <div class="card">
+                <h3>Harga Transparan</h3>
+                <p>Informasi harga layanan dapat dilihat sebelum memesan.</p>
+            </div>
+
+            <div class="card">
+                <h3>Tracking Pesanan</h3>
+                <p>Pelanggan dapat memantau perkembangan proses pencucian.</p>
+            </div>
+
+            <div class="card">
+                <h3>Informasi Terpusat</h3>
+                <p>Data pesanan pelanggan tersimpan dalam sistem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni">
+        <div class="section-title">
+            <h2>Testimoni Pelanggan</h2>
+            <p>Contoh tampilan ulasan pelanggan</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Pelanggan 1</h3>
+                <p>"Proses pemesanan mudah dan informasi layanan jelas."</p>
+            </div>
+
+            <div class="card">
+                <h3>Pelanggan 2</h3>
+                <p>"Pilihan layanan dan harga mudah dipahami."</p>
+            </div>
+
+            <div class="card">
+                <h3>Pelanggan 3</h3>
+                <p>"Website membantu saya memantau pesanan."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PEMESANAN -->
+    <section class="booking">
+        <h2>Sepatu Kamu Butuh Perawatan?</h2>
+
+        <p>
+            Yuk, pesan layanan pencucian sepatu melalui AjaClean.
+        </p>
+
+        <br>
+
+        <a href="booking.html" class="btn">Mulai Pemesanan</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 AjaClean. Sistem Pencucian Sepatu Berbasis Web.</p>
+    </footer>
+
+    <!-- INTEGRASI API LAYANAN -->
+    <script>
+        const API_URL = "http://localhost:5001/api";
+
+        async function cekLayanan() {
+            const status = document.getElementById("serviceStatus");
+
+            try {
+                const response = await fetch(`${API_URL}/services`);
+                const result = await response.json();
+
+                if (!response.ok || result.success === false) {
+                    throw new Error(result.message || "Gagal mengambil layanan");
+                }
+
+                const services = Array.isArray(result.data)
+                    ? result.data
+                    : result.data?.services;
+
+                if (!Array.isArray(services)) {
+                    throw new Error("Format data layanan tidak sesuai.");
+                }
+
+                status.textContent =
+                    `Terhubung ke server. ${services.length} layanan tersedia.`;
+
+            } catch (error) {
+                status.textContent =
+                    "Belum dapat terhubung ke server. Periksa backend AjaClean.";
+
+                console.error("Kesalahan layanan:", error);
+            }
+        }
+
+        cekLayanan();
+    </script>
+
+</body>
+</html>
