@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaClean - Dashboard Karyawan</title>
+
+    <!-- Menggunakan CSS Customer -->
+    <link rel="stylesheet" href="assets/css/stylecust.css">
+
+    <style>
+        /* Layout khusus dashboard karyawan */
+
+        .employee-dashboard {
+            padding: 35px 5%;
+        }
+
+        .dashboard-title {
+            margin-bottom: 30px;
+        }
+
+        .dashboard-title h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .dashboard-title p {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .employee-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .employee-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #eeeeee;
+            transition: 0.3s ease;
+        }
+
+        .employee-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+        }
+
+        .employee-card h3 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #777777;
+        }
+
+        .employee-card .number {
+            font-size: 30px;
+            font-weight: bold;
+            color: #286b4d;
+        }
+
+        .employee-card .description {
+            font-size: 12px;
+            color: #888888;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 800px) {
+            .employee-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .employee-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-title h1 {
+                font-size: 22px;
+            }
+        }
+
+        /* Animasi halaman */
+
+        @keyframes pageEnter {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .employee-dashboard {
+            animation: pageEnter 0.45s ease-out;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .employee-dashboard,
+            .employee-card {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <a class="brand" href="karyawan.html">
+            <span class="brand-name">aja<span>clean</span></span>
+        </a>
+
+        <div class="top-actions">
+
+            <div class="account-name">Hasby</div>
+            <div class="avatar">H</div>
+
+            <div class="menu-wrap">
+
+                <input
+                    class="menu-check"
+                    type="checkbox"
+                    id="menu-toggle"
+                >
+
+                <label class="menu-button" for="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="menu-dropdown">
+
+                    <div class="menu-heading">
+                        MENU KARYAWAN
+                    </div>
+
+                    <a class="menu-link active" href="karyawan.html">
+                        Dashboard
+                    </a>
+
+                    <a class="menu-link" href="penjemputan.html">
+                        Tugas Penjemputan
+                    </a>
+
+                    <a class="menu-link" href="proses.html">
+                        Proses Pencucian
+                    </a>
+
+                    <a class="menu-link" href="qc.html">
+                        Pemeriksaan QC
+                    </a>
+
+                    <a class="menu-link" href="pengembalian.html">
+                        Pengembalian Pesanan
+                    </a>
+
+                    <a class="menu-link" href="index.html">
+                        Keluar
+                    </a>
+
+                </nav>
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+    <main class="employee-dashboard">
+
+        <section class="dashboard-title">
+
+            <h1>Dashboard Karyawan</h1>
+
+            <p>
+                Selamat datang, Hasby. Berikut ringkasan pekerjaan operasional AjaClean.
+            </p>
+
+        </section>
+
+
+        <!-- STATISTIK PEKERJAAN -->
+        <section class="employee-stats">
+
+            <div class="employee-card">
+                <h3>Total Tugas Hari Ini</h3>
+                <div class="number">08</div>
+                <div class="description">
+                    Seluruh tugas operasional
+                </div>
+            </div>
+
+            <div class="employee-card">
+                <h3>Menunggu Penjemputan</h3>
+                <div class="number">02</div>
+                <div class="description">
+                    Pesanan yang perlu dijemput
+                </div>
+            </div>
+
+            <div class="employee-card">
+                <h3>Proses Pencucian</h3>
+                <div class="number">03</div>
+                <div class="description">
+                    Pesanan sedang dicuci
+                </div>
+            </div>
+
+            <div class="employee-card">
+                <h3>Menunggu Pemeriksaan QC</h3>
+                <div class="number">01</div>
+                <div class="description">
+                    Pesanan menunggu pemeriksaan
+                </div>
+            </div>
+
+            <div class="employee-card">
+                <h3>Proses Finishing</h3>
+                <div class="number">01</div>
+                <div class="description">
+                    Pesanan dalam tahap akhir
+                </div>
+            </div>
+
+            <div class="employee-card">
+                <h3>Siap Dikembalikan</h3>
+                <div class="number">01</div>
+                <div class="description">
+                    Pesanan siap diserahkan
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
