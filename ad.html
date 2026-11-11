@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaClean - Dashboard Admin</title>
+
+    <link rel="stylesheet" href="assets/css/stylecust.css">
+
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .dashboard-heading {
+            margin-bottom: 28px;
+        }
+
+        .dashboard-heading h1 {
+            margin-bottom: 8px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .stat-card, .feature-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .stat-card {
+            border-left: 5px solid #04cc00;
+        }
+
+        .stat-card p {
+            color: #777;
+            margin: 0 0 12px;
+        }
+
+        .stat-card h2 {
+            margin: 0;
+            font-size: 30px;
+            color: #222;
+        }
+
+        .section-heading {
+            margin-bottom: 18px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            text-decoration: none;
+            color: #222;
+            transition: 0.25s ease;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #04cc00;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #eaffea;
+            color: #04b900;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 8px;
+        }
+
+        .feature-card p {
+            color: #777;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        @media (max-width: 850px) {
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .stat-grid, .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="admin.html">
+            <span class="brand-name">aja<span>clean</span></span>
+        </a>
+
+        <div class="top-actions">
+            <div class="account-name">Admin</div>
+            <div class="avatar">A</div>
+
+            <div class="menu-wrap">
+                <input class="menu-check" type="checkbox" id="menu-toggle">
+
+                <label class="menu-button" for="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="menu-dropdown">
+                    <div class="menu-heading">MENU ADMIN</div>
+                    <a class="menu-link active" href="admin.html">Dashboard</a>
+                    <a class="menu-link" href="pesanan-admin.html">Kelola Pesanan</a>
+                    <a class="menu-link" href="pelanggan-admin.html">Data Pelanggan</a>
+                    <a class="menu-link" href="status-pesanan.html">Status Pesanan</a>
+                    <a class="menu-link" href="invoice.html">Invoice</a>
+                    <a class="menu-link" href="index.html">Keluar</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="dashboard-heading">
+            <h1>Dashboard Admin</h1>
+            <p>Selamat datang di sistem pengelolaan layanan AjaClean.</p>
+        </section>
+
+        <section class="stat-grid">
+
+            <div class="stat-card">
+                <p>Total Pesanan</p>
+                <h2>24</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pesanan Baru</p>
+                <h2>08</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Sedang Diproses</p>
+                <h2>10</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pesanan Selesai</p>
+                <h2>06</h2>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <h2>Menu Pengelolaan</h2>
+            </div>
+
+            <div class="feature-grid">
+
+                <a href="pesanan-admin.html" class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Kelola Pesanan</h3>
+                    <p>Mencatat dan mengelola pesanan layanan pelanggan.</p>
+                </a>
+
+                <a href="pelanggan-admin.html" class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Data Pelanggan</h3>
+                    <p>Melihat dan mengelola informasi pelanggan.</p>
+                </a>
+
+                <a href="status-pesanan.html" class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Status Pesanan</h3>
+                    <p>Memperbarui perkembangan pengerjaan pesanan.</p>
+                </a>
+
+                <a href="invoice.html" class="feature-card">
+                    <div class="feature-icon">🧾</div>
+                    <h3>Invoice</h3>
+                    <p>Mengelola tagihan dan informasi pembayaran pelanggan.</p>
+                </a>
+
+                <a href="riwayat-admin.html" class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Riwayat Pesanan</h3>
+                    <p>Melihat catatan pesanan yang pernah masuk.</p>
+                </a>
+
+                <a href="penugasan.html" class="feature-card">
+                    <div class="feature-icon">🧑‍🔧</div>
+                    <h3>Penugasan Pekerja</h3>
+                    <p>Melihat dan mengatur penugasan pengerjaan pesanan.</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
